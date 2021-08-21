@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "bilicraftdanmaku",
+  "version": "${version}",
+
+  "name": "Bilicraft Danmaku",
+  "description": "A in-game Danmaku mod for Bilicraft!",
+  "authors": [
+    "zlainsama",
+    "PsychoZaku",
+    "Ghost_chu",
+    "Hambaka",
+    "Sasanarx"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Bilicraft-Community/BilicraftDanmaku-Fabric.git",
+    "sources": "https://github.com/Bilicraft-Community/BilicraftDanmaku-Fabric.git"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/bilicraftdanmaku/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.bilicraft.danmaku.BilicraftDanmakuClient"
+    ],
+    "main": [
+      "com.bilicraft.danmaku.BilicraftDanmaku"
+    ]
+  },
+  "mixins": [
+    "bilicraftdanmaku.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16",
+    "bilicraftclientui": ">=0.2.14"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
