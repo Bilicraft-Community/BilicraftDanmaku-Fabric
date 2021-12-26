@@ -130,7 +130,7 @@ public class CommentScreen extends Screen {
     protected Rect areaSettings;
 
     @Override
-    public boolean isPauseScreen(){
+    public boolean shouldPause(){
         return false;
     }
 

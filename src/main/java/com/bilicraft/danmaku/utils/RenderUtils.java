@@ -25,7 +25,7 @@ public class RenderUtils {
     public static void drawRectTexture(MatrixStack matrixStack, double x, double y, int w, int h, double u, double v) {
         BufferBuilder bufferBuilder = Tessellator.getInstance().getBuffer();
         bufferBuilder.begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE);
-        Matrix4f matrices = matrixStack.peek().getModel();
+        Matrix4f matrices = matrixStack.peek().getPositionMatrix();
         bufferBuilder.vertex(matrices,(float)x + 0, (float)y + h, 0).texture( ((float) (u + 0) * fW), ((float) (v + h) * fH)).next();
         bufferBuilder.vertex(matrices,(float)x + w, (float)y + h, 0).texture( ((float) (u + w) * fW), ((float) (v + h) * fH)).next();
         bufferBuilder.vertex(matrices,(float)x + w, (float)y + 0, 0).texture( ((float) (u + w) * fW), ((float) (v + 0) * fH)).next();
