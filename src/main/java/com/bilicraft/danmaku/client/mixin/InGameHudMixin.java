@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class InGameHudMixin {
 
     @Inject(at = @At("TAIL"), method = "render")
-    public void render(MatrixStack matrices, float tickDelta, CallbackInfo callbackInfo) {
+    public void render(MatrixStack matrices, float tickDelta, CallbackInfo ci) {
         CommentManager.INSTANCE.renderHook(matrices, tickDelta);
     }
 }
